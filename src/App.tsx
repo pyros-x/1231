@@ -1,11 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-import Button from '@mui/material/Button'
+import MainLayout from './layouts/MainLayout';
+import Dashboard from './pages/dashboard'; 
+
 
 function App() {
   return (
-    <Button variant="contained">kkkkk</Button>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
