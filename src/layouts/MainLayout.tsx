@@ -19,6 +19,8 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
+import HeaderSearch from '../components/HeaderSearch';
+
 const drawerWidth = 240;
 
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -122,6 +124,7 @@ export default function MiniDrawer() {
           <Typography variant="h6" noWrap component="div">
             Mini variant drawer
           </Typography>
+          <HeaderSearch />
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
